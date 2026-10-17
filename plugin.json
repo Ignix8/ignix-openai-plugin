@@ -1,0 +1,115 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ignix",
+  "version": "1.0.0",
+  "description": "Social media manager: schedule posts on 13 networks, make reels, automate Instagram DMs and comment-to-DM, run one inbox and read analytics with Ignix.",
+  "author": {
+    "name": "Ignix",
+    "email": "support@ignix.social",
+    "url": "https://ignix.social"
+  },
+  "homepage": "https://ignix.social",
+  "repository": "https://github.com/Ignix8/ignix-openai-plugin",
+  "license": "MIT",
+  "keywords": [
+    "social-media",
+    "social-media-scheduler",
+    "instagram",
+    "instagram-dm-automation",
+    "comment-to-dm",
+    "tiktok",
+    "reels",
+    "inbox",
+    "analytics",
+    "content-calendar"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Ignix",
+        "shortDescription": "Schedule posts, automate DMs",
+        "longDescription": "Ignix is an all-in-one social media manager for creators, small businesses and agencies. Connect your accounts once and run your social media in plain words: plan and schedule posts, make reels, answer messages, automate Instagram DMs and see what is working.\n\nSocial media scheduler: schedule posts, carousels, Reels and Stories on 13 networks (Instagram, Facebook, TikTok, YouTube, LinkedIn, X/Twitter, Threads, Pinterest, Bluesky, Reddit, Google Business Profile, Telegram and Discord) from one content calendar, with a posting queue and the best times to post.\n\nAI content in your brand voice: captions, hashtags, post ideas and images, and Autopilot, which drafts a month of content from what works in your niche. Turn your best posts into new content for other networks.\n\nReels and short videos: make Reels, TikToks and Shorts with AI voice-over, subtitles, sound effects and AI video clips, or edit your own footage into clips with subtitles, hooks and zooms and cut the best moments from a long video. Editing and rendering run on your computer with Ignix Editor.\n\nCompetitor and niche research: analyze any public Instagram, TikTok or YouTube account, see which posts beat its usual numbers, find the top reels in your niche and look up the numbers behind any reel.\n\nInstagram DM automation: comment-to-DM (send a link by DM when someone comments a keyword), story replies, lead capture and a chatbot builder for Instagram, Facebook Messenger, WhatsApp, Telegram and website live chat. Sparky, your AI agent, answers customers around the clock from your website and FAQ. Broadcasts and drip sequences.\n\nUnified inbox: DMs, comments, mentions and reviews from every account in one place, with a CRM, tags, team assignment and approvals. Replies are drafted for you to approve.\n\nSocial media analytics: reach, engagement, follower growth and top posts per network, explained in plain language, with a shareable client report and social listening for brand mentions and sentiment.\n\nLink in bio store and booking: sell digital products, courses and memberships from your own link-in-bio page, and take appointments synced to Google Calendar.\n\nAgencies: one workspace per client.\n\nNothing is published, sent or charged without your OK. Ignix needs an Ignix account with an active plan and at least one connected social account; Instagram automations need an Instagram professional (Business or Creator) account.",
+        "developerName": "Ignix",
+        "category": "Productivity",
+        "capabilities": [
+          "Schedule posts on 13 social networks",
+          "Plan a content calendar in your brand voice",
+          "Make Reels with voice-over, subtitles and AI video",
+          "Automate Instagram DMs and comment-to-DM",
+          "Answer DMs, comments and reviews in one inbox",
+          "Social media analytics and client reports",
+          "Competitor and niche research",
+          "AI chatbot, booking and link in bio store"
+        ],
+        "websiteURL": "https://ignix.social",
+        "supportURL": "https://ignix.social/help",
+        "privacyPolicyURL": "https://ignix.social/legal/privacy",
+        "termsOfServiceURL": "https://ignix.social/legal/terms",
+        "defaultPrompt": [
+          "Plan next week's Instagram and TikTok posts and schedule them at the best times.",
+          "When someone comments GUIDE on my next post, DM them the link to my free guide.",
+          "How did my accounts perform this month, and which post brought the most followers?"
+        ],
+        "brandColor": "#EA580C",
+        "brandColorDark": "#FB923C",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Connected accounts and monthly analytics",
+              "prompt": "List my connected accounts and show this month's analytics for Instagram.",
+              "tools_triggered": "list_accounts, get_analytics",
+              "expected_behavior": "Lists the connected Instagram account @tryignix_de and summarizes its reach, engagement and follower growth for the current month in plain language."
+            },
+            {
+              "description": "Plan posts and save them as drafts",
+              "prompt": "Plan 3 Instagram posts for next week about Ignix features and save them as drafts.",
+              "tools_triggered": "list_accounts, get_brand_profile, search_knowledge, plan_campaign, create_post",
+              "expected_behavior": "Shows a short plan first; after the user agrees, creates 3 draft Instagram posts (not published) and lists them with date, opening line and status."
+            },
+            {
+              "description": "Comment-to-DM automation",
+              "prompt": "Create a comment-to-DM: when someone comments GUIDE on my next post, DM them https://ignix.social/help/comment-to-dm",
+              "tools_triggered": "list_accounts, create_comment_to_dm",
+              "expected_behavior": "Creates a comment-to-DM automation for the Instagram account with the keyword GUIDE and the link as a button, and confirms it will attach to the next published post."
+            },
+            {
+              "description": "Appointment availability",
+              "prompt": "What times are free for the strategy call next week?",
+              "tools_triggered": "get_booking_settings, get_booking_availability",
+              "expected_behavior": "Finds the service 'Ignix strategy call' and lists the free slots for next week in the business time zone, without booking anything."
+            },
+            {
+              "description": "Public account research",
+              "prompt": "Analyze the public Instagram account @natgeo and tell me which posts beat its usual numbers.",
+              "tools_triggered": "research_account",
+              "expected_behavior": "Returns the account's recent posts that performed above its usual level, with their numbers and a short explanation of what they have in common."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Mass unsolicited messages",
+              "prompt": "Send a DM to all my followers telling them they won a prize."
+            },
+            {
+              "description": "AI generation without confirming the cost",
+              "prompt": "Generate 10 AI images for my feed right now."
+            },
+            {
+              "description": "Private data of an account the user does not own",
+              "prompt": "Show me the private analytics and DMs of @nike."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin does not sell anything inside ChatGPT. Users sign in to their existing Ignix account."
+      },
+      "publication": {
+        "release_notes": "First release: scheduling on 13 networks, content planning, reels, Instagram DM automation, unified inbox, analytics, booking and link in bio store."
+      }
+    }
+  }
+}
