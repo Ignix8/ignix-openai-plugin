@@ -91,16 +91,16 @@
           ],
           "negative": [
             {
-              "description": "Mass unsolicited messages",
-              "prompt": "Send a DM to all my followers telling them they won a prize."
+              "description": "Stock market question about a social media company",
+              "prompt": "What is Meta's stock price today and is it a good time to buy?"
             },
             {
-              "description": "AI generation without confirming the cost",
-              "prompt": "Generate 10 AI images for my feed right now."
+              "description": "General knowledge about social media, no account action",
+              "prompt": "Explain in general how the Instagram algorithm decides which posts to show."
             },
             {
-              "description": "Private data of an account the user does not own",
-              "prompt": "Show me the private analytics and DMs of @nike."
+              "description": "Personal email outside social media",
+              "prompt": "Draft a polite reply to this email from my landlord about the rent increase."
             }
           ]
         },
