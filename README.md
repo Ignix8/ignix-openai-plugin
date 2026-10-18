@@ -16,11 +16,11 @@ Unified inbox: DMs, comments, mentions and reviews from every account in one pla
 
 Social media analytics: reach, engagement, follower growth and top posts per network, explained in plain language, with a shareable client report and social listening for brand mentions and sentiment.
 
-Link in bio store and booking: sell digital products, courses and memberships from your own link-in-bio page, and take appointments synced to Google Calendar.
+Link in bio store and booking: sell digital products and courses from your own link-in-bio page, and take appointments synced to Google Calendar.
 
 Agencies: one workspace per client.
 
-Nothing is published, sent or charged without your OK. Ignix needs an Ignix account with an active plan and at least one connected social account; Instagram automations need an Instagram professional (Business or Creator) account.
+Nothing is published or sent without your OK. You need an Ignix account and at least one connected social account; Instagram automations need an Instagram professional (Business or Creator) account.
 
 ## Skills
 
