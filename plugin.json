@@ -106,7 +106,7 @@
         },
         "demo_recording_url": "https://youtu.be/JnJUnVDp6nI",
         "commerce": false,
-        "commerce_description": "The plugin does not sell anything inside ChatGPT. Users sign in to their existing Ignix account."
+        "commerce_description": "Nothing is sold to the ChatGPT user and no checkout or upgrade happens in ChatGPT. Authenticated businesses administer their own Ignix link-in-bio store, as with any store-management connector: tools create draft products, edit store settings and the store page, manage discount codes and publish listings only after the user explicitly confirms. Buyers purchase separately on the business's own storefront, paid to the business's own Stripe account; publishing or editing a live product may update that Stripe configuration."
       },
       "publication": {
         "release_notes": "First release: scheduling on 13 networks, content planning, reels, Instagram DM automation, unified inbox, analytics, booking and link in bio store."
