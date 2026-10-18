@@ -6,7 +6,7 @@ license: MIT
 
 # Plan and schedule content with Ignix
 
-Requires the Ignix connector. Ignix only works with an active plan: if a tool says the plan is not active, stop and point the user to https://ignix.social/app/billing.
+Requires the Ignix connector. Ignix only works with an active plan: if a tool says the plan is not active, stop and tell the user what it says: the account owner can fix it by opening the Ignix app.
 
 1. `list_accounts` — which accounts and networks exist. Every publishing tool needs these ids.
 2. `get_brand_profile` and `search_knowledge` on the topic — the brand voice and the facts (prices, products, policies). Never invent them.

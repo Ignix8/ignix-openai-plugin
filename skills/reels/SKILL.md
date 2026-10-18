@@ -6,7 +6,7 @@ license: MIT
 
 # Make reels and short videos with Ignix
 
-Requires the Ignix connector. Ignix only works with an active plan: if a tool says the plan is not active, stop and point the user to https://ignix.social/app/billing.
+Requires the Ignix connector. Ignix only works with an active plan: if a tool says the plan is not active, stop and tell the user what it says: the account owner can fix it by opening the Ignix app.
 
 1. Decide what kind of video it is:
    - A new reel from an idea, a script or a product: `get_reel_playbook`.
